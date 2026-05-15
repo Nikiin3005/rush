@@ -1,0 +1,42 @@
+squad_code: "tech-landing-page"
+purpose: "Criar sites e landing pages profissionais para clientes da agência, com design sofisticado, moderno, estética tecnológica e inovadora. Dark mode premium + glassmorphism futurista."
+domain: "content"
+
+company:
+  name: "Agência Impacto Digital"
+  tone: "Profissional mas acessível, sem jargão técnico desnecessário"
+  products: "Gestão de tráfego pago, copy para anúncios e funis, automação de marketing, análise de dados e reporting"
+
+language: "pt-BR"
+
+context:
+  audience: "Clientes da agência — empresas B2B de diversos nichos (SaaS, e-commerce, construção civil, saúde)"
+  platforms: "Web — sites institucionais e landing pages"
+  tone: "Tech premium, sofisticado, inovador"
+  visual_style: "Dark mode premium + Glassmorphism futurista — fundo escuro, efeitos de vidro/blur, gradientes vibrantes, acentos neon, profundidade com camadas"
+  deliverable: "HTML/CSS/JS responsivo, pronto para deploy"
+  style_references:
+    - "Vercel"
+    - "Linear"
+    - "Arc Browser"
+    - "Lemon Squeezy"
+    - "Raycast"
+
+tools_needed:
+  - "web_search"
+  - "web_fetch"
+  - "image-ai-generator"
+  - "image-creator"
+
+investigation:
+  enabled: true
+  mode: "sherlock"
+  targets:
+    - url: "https://pinkplus.com.br/"
+      platform: "website"
+      investigation_mode: "full_page"
+    - url: "https://www.agenciasetup.com.br"
+      platform: "website"
+      investigation_mode: "full_page"
+
+target_formats: []

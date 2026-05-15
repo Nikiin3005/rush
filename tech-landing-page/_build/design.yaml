@@ -1,0 +1,139 @@
+squad:
+  code: "tech-landing-page"
+  name: "Tech Landing Page"
+  description: "Cria sites e landing pages profissionais com estética dark mode premium + glassmorphism futurista para clientes da agência."
+
+agents:
+  - id: "researcher"
+    name: "Rafael Referência"
+    title: "Pesquisador de UX e Referências"
+    icon: "🔍"
+    execution: "subagent"
+    role_summary: "Pesquisa tendências de design, analisa concorrentes do cliente e define a arquitetura de informação da landing page."
+    skills:
+      - web_search
+      - web_fetch
+    tasks:
+      - name: "research-references-and-structure"
+        file: "tasks/research-references-and-structure.md"
+        description: "Pesquisa referências visuais, tendências e define estrutura de seções da LP"
+
+  - id: "copywriter"
+    name: "Clara Conversão"
+    title: "Copywriter Estratégica para Tech"
+    icon: "✍️"
+    execution: "inline"
+    role_summary: "Cria toda a copy da landing page: headline, proposta de valor, seções, CTAs, microcopy. Usa frameworks de conversão adaptados ao nicho do cliente."
+    skills: []
+    tasks:
+      - name: "write-landing-page-copy"
+        file: "tasks/write-landing-page-copy.md"
+        description: "Escreve copy completa da landing page com headlines, body e CTAs"
+
+  - id: "designer"
+    name: "Diego Darkmode"
+    title: "Designer de Interface UI Premium"
+    icon: "🎨"
+    execution: "inline"
+    role_summary: "Constrói HTML/CSS/JS responsivo com estética dark mode + glassmorphism. Gradientes vibrantes, efeitos de vidro/blur, animações sutis, tipografia sofisticada."
+    skills: []
+    tasks:
+      - name: "design-landing-page"
+        file: "tasks/design-landing-page.md"
+        description: "Cria HTML/CSS/JS responsivo com design dark mode + glassmorphism"
+
+  - id: "reviewer"
+    name: "Victor Veredito"
+    title: "Revisor de Qualidade"
+    icon: "✅"
+    execution: "inline"
+    role_summary: "Revisa copy, design, responsividade, acessibilidade e conversão. Aplica scoring contra critérios definidos."
+    skills: []
+    tasks:
+      - name: "review-landing-page"
+        file: "tasks/review-landing-page.md"
+        description: "Revisa qualidade geral da landing page contra critérios definidos"
+
+pipeline:
+  - step: 1
+    name: "briefing-projeto"
+    type: "checkpoint"
+
+  - step: 2
+    name: "research-focus"
+    type: "checkpoint"
+    output_file: "squads/tech-landing-page/output/research-focus.md"
+
+  - step: 3
+    name: "pesquisa-referencias"
+    type: "agent"
+    agent: "researcher"
+    execution: "subagent"
+    input_file: "squads/tech-landing-page/output/research-focus.md"
+    output_file: "squads/tech-landing-page/output/research-output.md"
+    model_tier: "powerful"
+
+  - step: 4
+    name: "aprovar-estrutura"
+    type: "checkpoint"
+
+  - step: 5
+    name: "copy-landing-page"
+    type: "agent"
+    agent: "copywriter"
+    execution: "inline"
+    input_file: "squads/tech-landing-page/output/research-output.md"
+    output_file: "squads/tech-landing-page/output/copy-output.md"
+
+  - step: 6
+    name: "aprovar-copy"
+    type: "checkpoint"
+
+  - step: 7
+    name: "design-landing-page"
+    type: "agent"
+    agent: "designer"
+    execution: "inline"
+    input_file: "squads/tech-landing-page/output/copy-output.md"
+    output_file: "squads/tech-landing-page/output/landing-page.html"
+
+  - step: 8
+    name: "aprovar-design"
+    type: "checkpoint"
+
+  - step: 9
+    name: "review-final"
+    type: "agent"
+    agent: "reviewer"
+    execution: "inline"
+    input_file: "squads/tech-landing-page/output/landing-page.html"
+    output_file: "squads/tech-landing-page/output/review-output.md"
+    on_reject: 7
+
+  - step: 10
+    name: "aprovacao-final"
+    type: "checkpoint"
+
+investigation:
+  enriched: true
+  profiles_analyzed: 2
+  date: "2026-05-14"
+  dir: "squads/tech-landing-page/_investigations"
+
+research_brief: |
+  Framework de LP de alta conversão: Hero → Dor → Solução → Benefícios → Prova Social → Pricing → FAQ → CTA → Footer.
+  Dark mode como padrão tech (60%+ dos SaaS usam em 2026). Glassmorphism evoluído: camadas translúcidas sutis com gradientes ambiente.
+  Copy: clareza > criatividade. Headlines que respondem: para quem, qual resultado, qual ação.
+  Referências: pinkplus.com.br (estrutura de conversão), agenciasetup.com.br (copy direto + prova social).
+
+skills_installed:
+  - "web_search"
+  - "web_fetch"
+
+formats_selected: []
+
+best_practices_consulted:
+  - "copywriting.md"
+  - "image-design.md"
+  - "review.md"
+  - "researching.md"

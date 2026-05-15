@@ -1,0 +1,15 @@
+code: tech-landing-page
+name: "Tech Landing Page"
+description: "Cria sites e landing pages profissionais com estética dark mode premium + glassmorphism futurista para clientes da agência."
+
+skills:
+  - web_search
+  - web_fetch
+
+data:
+  - pipeline/data/research-brief.md
+  - pipeline/data/domain-framework.md
+  - pipeline/data/quality-criteria.md
+  - pipeline/data/output-examples.md
+  - pipeline/data/anti-patterns.md
+  - pipeline/data/tone-of-voice.md

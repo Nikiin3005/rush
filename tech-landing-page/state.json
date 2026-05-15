@@ -1,0 +1,19 @@
+{
+  "squad": "tech-landing-page",
+  "status": "completed",
+  "step": { "current": 10, "total": 10, "label": "final-approval" },
+  "agents": [
+    { "id": "researcher", "name": "Rafael Referência", "icon": "🔍", "status": "done", "desk": { "col": 1, "row": 1 } },
+    { "id": "copywriter", "name": "Clara Conversão", "icon": "✍️", "status": "done", "desk": { "col": 2, "row": 1 } },
+    { "id": "designer", "name": "Diego Darkmode", "icon": "🎨", "status": "done", "desk": { "col": 3, "row": 1 } },
+    { "id": "reviewer", "name": "Victor Veredito", "icon": "✅", "status": "done", "desk": { "col": 1, "row": 2 } }
+  ],
+  "handoff": {
+    "from": "reviewer",
+    "to": "user",
+    "message": "Review completo. Score 8.08/10. CONDITIONAL APPROVE → correção aplicada → APPROVE.",
+    "completedAt": "2026-05-14T12:15:00Z"
+  },
+  "startedAt": "2026-05-14T12:00:00Z",
+  "updatedAt": "2026-05-14T12:06:00Z"
+}

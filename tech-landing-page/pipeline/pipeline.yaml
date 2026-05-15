@@ -1,0 +1,22 @@
+name: "Tech Landing Page Pipeline"
+description: "Pipeline completo para criação de landing pages tech premium."
+
+steps:
+  - file: steps/step-01-briefing.md
+  - file: steps/step-02-research-focus.md
+  - file: steps/step-03-pesquisa-referencias.md
+  - file: steps/step-04-aprovar-estrutura.md
+  - file: steps/step-05-copy-landing-page.md
+  - file: steps/step-06-aprovar-copy.md
+  - file: steps/step-07-design-landing-page.md
+  - file: steps/step-08-aprovar-design.md
+  - file: steps/step-09-review-final.md
+  - file: steps/step-10-aprovacao-final.md
+
+checkpoints:
+  - step-01-briefing
+  - step-02-research-focus
+  - step-04-aprovar-estrutura
+  - step-06-aprovar-copy
+  - step-08-aprovar-design
+  - step-10-aprovacao-final
